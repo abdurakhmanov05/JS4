@@ -321,8 +321,8 @@
 
     for(let item of users) {
         let elem = item.email.split('.')[-1]
-        if(emails[elem]) {
-            emails[elem].push(item)
+    if(emails[elem]) {
+        emails[elem].push(item)
     } else {
         other.push(item)
     }
