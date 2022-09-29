@@ -326,6 +326,7 @@
     } else {
         other.push(item)
     }
-    
+    }
+
     console.log(emails)
     console.log(other)
