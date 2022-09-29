@@ -320,7 +320,7 @@
     let other = []
 
     for(let item of users) {
-        let elem = item.email.split('.')[-1]
+        let elem = item.email.split('.').at(-1)
     if(emails[elem]) {
         emails[elem].push(item)
     } else {
