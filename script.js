@@ -72,15 +72,9 @@
         count: 0,
         arr: []
     }
-
-    for(let elem of arr)
-    if(elem.completed === true){
-        a.arr.push(elem)
-        a.count++
-    } else{
-        b.arr.push(elem)
-        b.count++
-    }
+    
+    arr.filter(item => item.completed == true ? a.arr.push(item) : b.arr.push(item))
+    
     console.log(a)
     console.log(b)
 
@@ -326,18 +320,9 @@
     let other = []
 
     for(let item of users) {
-        let p = item.email.split('.')
-        p = p[p.length - 1]
-
-        if(emails.org === emails[p]){
-            emails.org.push(item)
-        } else if(emails.net === emails[p]){
-            emails.net.push(item)
-        } else if(emails.info === emails[p]){
-            emails.info.push(item)
-        } else {
-            other.push(item)
-        }
+        let elem = item.email.split('.')[-1]
+    } else {
+        other.push(item)
     }
     
     console.log(emails)
